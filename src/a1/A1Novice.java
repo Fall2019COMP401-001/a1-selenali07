@@ -3,27 +3,16 @@ package a1;
 import java.util.Scanner;
 
 public class A1Novice {
-	
-	/* you shouldn't have to use any Scanner methods 
-	 * other than next(), nextInt(), and nextDouble()
-	 * - "KMP"
-	 */
 
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
 
-
-		// Your code follows here.
-		
-		
 		int count = scan.nextInt();
 		
 		String[] customers = new String[count];
 		
-		
 		for(int i = 0; i < count; i++) {
-			
 			
 			char firstName = scan.next().charAt(0);
 			
@@ -45,7 +34,12 @@ public class A1Novice {
 			
 			}
 			
-			System.out.println(firstName + ". " + lastName + ": " + String.format("%.2f", cost));
+			customers[i] = firstName + ". " + lastName + ": " + String.format("%.2f", cost);
+		}
+		
+		for (int i=0; i<customers.length; i++) {
+			
+			System.out.println(customers[i]);
 			
 		}
 		scan.close();
