@@ -21,33 +21,31 @@ public class A1Adept {
 			
 			int price = scan.nextInt();
 
-		}
-		
-		int people = scan.nextInt();
-		
-		customers = new String[people];
-		
-		for(int j = 0; j < people; j++) {
-				
-			String firstName = scan.next();
-				
-			String lastName = scan.next();
-				
-			int items = scan.nextInt();
-				
-			double cost = 0;
-				
-			for(int p = 0; p < items; p++) {
+			int people = scan.nextInt();
+			
+			customers = new String[people];
+			
+			for(int j = 0; j < people; j++) {
 					
-				int amount = scan.nextInt();
+				String firstName = scan.next();
 					
-				String name = scan.next();
+				String lastName = scan.next();
 					
-				double price = scan.nextDouble();
+				int items = scan.nextInt();
 					
-				cost += amount * price;
-				
-			}
+				double cost = 0;
+					
+				for(int p = 0; p < items; p++) {
+						
+					int amount = scan.nextInt();
+						
+					String name = scan.next();
+						
+					double price = scan.nextDouble();
+						
+					cost += amount * price;
+					
+				}
 	
 		produce[j] = firstName + ". " + lastName + ": " + String.format("%.2f", cost);
 			
@@ -56,27 +54,29 @@ public class A1Adept {
 		for (int i=0; i<produce.length; i++) {
 			
 			System.out.println(produce[i]);
+	
+}
+	
+	System.out.println("Biggest: " + biggest);
+	System.out.println("Smallest: " + smallest);
+	
+	
+	static int findValueMax(int[] price) {
+		
+		int cur_max = vals[0];
+		for (int i=1; i < .length; i++) {
+			if (vals[i] > cur_max) {
+				cur_max = vals[i];
+			}
+		}
+		return cur_max;
 	}
+
 	
 	scan.close();
-	}
-}
-/*System.out.println("Biggest: " + biggest);
-System.out.println("Smallest: " + smallest);
-}
-
-static int findValueMax(int[] vals) {
-	
-	int cur_max = vals[0];
-	for (int i=1; i < vals.length; i++) {
-		if (vals[i] > cur_max) {
-			cur_max = vals[i];
 		}
 	}
-	
-	return cur_max;
-	
-	*/
+	}
 
 
 
