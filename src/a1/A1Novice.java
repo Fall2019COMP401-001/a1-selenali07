@@ -11,8 +11,6 @@ public class A1Novice {
 
 	public static void main(String[] args) {
 		
-		System.out.println("Your Java version: " + System.getProperty("java.version"));
-		
 		Scanner scan = new Scanner(System.in);
 
 
@@ -47,12 +45,7 @@ public class A1Novice {
 			
 			}
 			
-			customers[i] = firstName + ". " + lastName + ": " + String.format("%.2f", cost);
-		}
-		
-		for (int i=0; i<customers.length; i++) {
-			
-			System.out.println(customers[i]);
+			System.out.println(firstName + ". " + lastName + ": " + String.format("%.2f", cost));
 			
 		}
 		scan.close();
