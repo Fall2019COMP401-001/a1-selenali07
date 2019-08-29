@@ -8,72 +8,83 @@ public class A1Adept {
 		
 		Scanner scan = new Scanner(System.in);
 	
-		/* Your code follows here.
-		String [] produce;
-		
 		int count = scan.nextInt();
 		
-		produce = new String[count];
+		String [] produce = new String[count];
+		
+		double[] price = new double[count];
 		
 		for(int i = 0; i < count; i++) {
-			
-			int price = scan.nextInt();
 
-			int people = scan.nextInt();
+			String prod = scan.next();
 			
-			customers = new String[people];
+			double cost = scan.nextDouble();
 			
-			for(int j = 0; j < people; j++) {
+			produce[i] = prod;
+			
+			price[i] = cost;
+			
+		}
+		
+		int customerCount = scan.nextInt();
+		
+		double biggest = 0;
+		
+		double smallest = -1;
+		
+		double average = 0;
+		
+		String biggestTotalName = "";
+		String smallestTotalName = "";
+			
+		for(int j = 0; j < customerCount; j++) {
 					
-				String firstName = scan.next();
+			String firstName = scan.next();
 					
-				String lastName = scan.next();
+			String lastName = scan.next();
 					
-				int items = scan.nextInt();
+			int num = scan.nextInt();
+			
+			double totalCost = 0;
 					
-				double cost = 0;
-					
-				for(int p = 0; p < items; p++) {
+			for(int p = 0; p < num; p++) {
 						
-					int amount = scan.nextInt();
+				int quantity = scan.nextInt();
 						
-					String name = scan.next();
+				String name = scan.next();
 						
-					double price = scan.nextDouble();
-						
-					cost += amount * price;
+				for(int a = 0; a < produce.length; a++) {
+					if(produce[a].equals(name)){
+					totalCost += + quantity * price[a]; 
 					
+					}
 				}
-	
-		produce[j] = firstName + ". " + lastName + ": " + String.format("%.2f", cost);
-			
-		}
-		
-		for (int i=0; i<produce.length; i++) {
-			
-			System.out.println(produce[i]);
-	
-}
-	
-	System.out.println("Biggest: " + biggest);
-	System.out.println("Smallest: " + smallest);
-	
-	
-	static int findValueMax(int[] price) {
-		
-		int cur_max = vals[0];
-		for (int i=1; i < .length; i++) {
-			if (vals[i] > cur_max) {
-				cur_max = vals[i];
 			}
+			
+			if(totalCost > biggest) {
+				
+				biggest = totalCost;
+				
+				biggestTotalName = firstName + " " + lastName;
+			}
+			
+			if(totalCost < smallest || smallest == -1) {
+				smallest = totalCost;
+				
+				smallestTotalName = firstName + " " + lastName;
+			}
+		
+			average = average + totalCost;
+			
 		}
-		return cur_max;
-	}
-
 	
+		average = average / customerCount;
+
+		System.out.println("Biggest: " + biggestTotalName + " (" + String.format("%.2f",biggest) + ")");
+		System.out.println("Smallest: " + smallestTotalName + " (" + String.format("%.2f", smallest) + ")");
+		System.out.println("Average: " + String.format("%.2f", average));
 	scan.close();
-		}
-		*/
+		
 	}
 	}
 
