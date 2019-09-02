@@ -58,7 +58,7 @@ public class A1Jedi {
 							}		
 						}
 					
-						totalQuantity[a] = totalQuantity[a] + quantity;
+						totalQuantity[a] += quantity;
 						if(bool) {
 							purchasedItems[a]++;
 							s[n] = name;
@@ -72,8 +72,8 @@ public class A1Jedi {
 		scan.close();
 		for(int i = 0; i < numOfItems; i++) {
 			if(purchasedItems[i] == 0) {
-				System.out.print("No customers bought " + produce[i]);
-			} else {
+				System.out.println("No customers bought " + produce[i]);
+			} else if (purchasedItems[i] > 0) {
 				System.out.println(purchasedItems[i] + " customers bought " + totalQuantity[i] + " " + produce[i]);
 			}	
 	
