@@ -55,7 +55,7 @@ public class A1Adept {
 						
 				for(int a = 0; a < produce.length; a++) {
 					if(produce[a].equals(name)){
-					totalCost += + quantity * price[a]; 
+					totalCost += quantity * price[a]; 
 					
 					}
 				}
