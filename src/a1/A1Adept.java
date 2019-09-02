@@ -28,6 +28,8 @@ public class A1Adept {
 		
 		int customerCount = scan.nextInt();
 		
+		// declared values for the three requirements
+		
 		double biggest = 0;
 		
 		double smallest = -1;
@@ -60,6 +62,7 @@ public class A1Adept {
 					}
 				}
 			}
+			// used boolean logic to cycle through the array of the produce prices
 			
 			if(totalCost > biggest) {
 				
@@ -74,7 +77,7 @@ public class A1Adept {
 				smallestTotalName = firstName + " " + lastName;
 			}
 		
-			average = average + totalCost;
+			average += totalCost;
 			
 		}
 	
